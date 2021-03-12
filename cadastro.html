@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Cadastro de Devs</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="cadastro.css">
+    </head>
+
+    <div>
+        <body>
+            <h1 class="texto" id="titulo">Cadastro de Dev's</h1>
+            <h4 class="texto">Complete suas informações</h4>
+        </body>
+    </div>
+
+    <form>
+        <label for="nome">Nome e Sobrenome</label>
+        <input type="text" id="nome">
+
+        <label for="email">E-mail</label>
+        <input type="text" id="email">
+
+        <div>
+            <p>Em qual area você desenvolve?</p>
+            <label for="ui-radio">UI</label>
+            <input type="radio" id="ui-radio" name="dev" value="ui">
+
+            <label for="ux-radio">UX</label>
+            <input type="radio" id="ux-radio" name="dev" value="ux">
+
+            <label for="back-radio">Backend</label>
+            <input type="radio" id="back-radio" name="dev" value="back">
+
+            <label for="front-radio">Frontend</label>
+            <input type="radio" id="front-radio" name="dev" value="front">
+        </div>
+        
+        <fieldset>
+            <legend>Experiencia</legend>
+
+            <select>
+                <option>Menos de 1 ano</option>
+                <option>Mais de 1 ano</option>
+                <option>Mais de 5 anos</option>
+            </select>
+        </fieldset>
+
+        <label for="tec">Tecnologias que usa</label>
+        <input type="text" id="tec">
+
+        <label for="sobre">Me conte da sua experiencia</label>
+        <textarea type="text" id="sobre" cols="80" rows="10"></textarea>
+
+        <button>Concluido</button>
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
