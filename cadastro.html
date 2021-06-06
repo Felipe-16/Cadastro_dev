@@ -1,75 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+    <!-- Aqui está o head da pagina-->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Cadastro de Devs</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="cadastro.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/cadastro.css">
     </head>
 
-    <div>
-        <body>
-            <h1 class="texto" id="titulo">Cadastro de Dev's</h1>
-            <h4 class="texto">Complete suas informações</h4>
-        </body>
-    </div>
-
-    <form>
-        <label for="nome">Nome e Sobrenome</label>
-        <input type="text" id="nome">
-
-        <label for="email">E-mail</label>
-        <input type="text" id="email">
-
+    <!--Aqui vem o body, onde vai vir todo o corpo da pagina-->
+    <body>
         <div>
-            <p>Em qual area você desenvolve?</p>
-            <label for="ui-radio">UI</label>
-            <input type="radio" id="ui-radio" name="dev" value="ui">
-
-            <label for="ux-radio">UX</label>
-            <input type="radio" id="ux-radio" name="dev" value="ux">
-
-            <label for="back-radio">Backend</label>
-            <input type="radio" id="back-radio" name="dev" value="back">
-
-            <label for="front-radio">Frontend</label>
-            <input type="radio" id="front-radio" name="dev" value="front">
+            <h1 id="titulo">Cadastro de Dev's</h1>
+            <h4 id="sub-titulo">Complete suas informações</h4>
         </div>
+    
+        <!-- Inserindo o forms aqui -->
+        <form>
+
+            <!-- Informações sobre a Pessoa-->
+            <label for="nome" class="label-pessoa">Nome Completo</label>
+            <input type="text" id="nome" name="nome" class="caixa" required>
+
+            <label for="email" class="label-pessoa">Email</label>
+            <input type="email" id="email" name="email" class="caixa" required placeholder="seuemail@dominio.com">
         
-        <fieldset>
-            <legend>Experiencia</legend>
+            <!-- Informações sobre a Area-->
+            <fieldset>
 
-            <select>
-                <option>Menos de 1 ano</option>
-                <option>Mais de 1 ano</option>
-                <option>Mais de 5 anos</option>
-            </select>
-        </fieldset>
+                <legend>Em qual area você atua?</legend>
 
-        <label for="tec">Tecnologias que usa</label>
-        <input type="text" id="tec">
+                <label for="ui-radio" class="radio"><input type="radio" id="ui-radio" name="dev" value="ui">UI</label>
 
-        <label for="sobre">Me conte da sua experiencia</label>
-        <textarea type="text" id="sobre" cols="80" rows="10"></textarea>
+                <label for="ux-radio" class="radio"><input type="radio" id="ux-radio" name="dev" value="ux">UX</label>
+                
+                <label for="back-radio" class="radio"><input type="radio" id="back-radio" name="dev" value="back">Backend</label>
+                
+                <label for="front-radio" class="radio"><input type="radio" id="front-radio" name="dev" value="front">Frontend</label>
+                
+            </fieldset>
+            
+            <!-- Informações sobre a experiencia -->
+            <fieldset>
+                <legend>Senioridade</legend>
 
-        <button>Concluido</button>
+                <select id="exp">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Junior</option>
+                    <option>Pleno</option>
+                    <option>Senior</option>
+                </select>
+            </fieldset>
 
+            <!-- Informação sobre as tecnologias -->
+            <fieldset>
 
-    </form>
+                <legend id="tec">Selecione as tecnologias que utiliza:</legend>
 
+                <label for="html-check" class="check"><input type="checkbox" id="html-check" value="HTML">HTML</label>
+                
+                <label for="js-check" class="check"><input type="checkbox" id="js-check" value="JavaScript">JavaScript</label>
+                
+                <label for="python-check" class="check"><input type="checkbox" id="python-check" value="Python">Python</label>
+                
+                <label for="css-check" class="check"><input type="checkbox" id="css-check" value="CSS">CSS</label>
+                
+                <label for="java-check" class="check"><input type="checkbox" id="java-check" value="Java">Java</label>
+                
+                <label for="dart-check" class="check"><input type="checkbox" id="dart-check" value="Dart">Dart</label>
+                
 
+            </fieldset>
 
+            <label for="sobre" class="label-pessoa" id="exp">Me conte sobre sua experiencia</label>
+            <textarea type="text" id="sobre" cols="80" rows="10" ></textarea>
 
+    
+            <button type="submit">Concluído</button>
 
+        </form>
 
-
-
-
-
-
-
-
+    </body>
 
 </html>
